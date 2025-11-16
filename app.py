@@ -25,7 +25,7 @@ api_key=st.text_input("Enter your Groq API key:",type="password")
 
 
 if api_key:
-    llm=ChatGroq(groq_api_key=api_key,model_name="llama3-8b-8192")
+    llm=ChatGroq(groq_api_key=api_key,model_name="llama-3.1-8b-instant")
 
     session_id=st.text_input("Session ID",value="default_session")
 
