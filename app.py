@@ -18,7 +18,7 @@ load_dotenv()
 os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
 embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-st.title("Conversational RAG With PDF uplaods and chat history")
+st.title("RAG application")
 st.write("Upload Pdf's and chat with their content")
 
 api_key=st.text_input("Enter your Groq API key:",type="password")
@@ -111,7 +111,7 @@ if api_key:
             )
             st.write(st.session_state.store)
             st.write("Assistant:", response['answer'])
-            st.write("Chat History:", session_history.messages)
+            # st.write("Chat History:", session_history.messages)
 else:
     st.warning("Please enter the GRoq API Key")
 
